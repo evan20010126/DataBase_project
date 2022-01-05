@@ -5,6 +5,5 @@
     $error = $stmt->execute(); //執行sql語法
     $result = $stmt->fetchAll();
     echo json_encode($result);
-    //test1
-    //test2
+    // this is a test
 ?>
