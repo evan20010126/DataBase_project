@@ -6,4 +6,5 @@
     $result = $stmt->fetchAll();
     echo json_encode($result);
     //test1
+    //test2
 ?>
