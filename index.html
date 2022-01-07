@@ -1,118 +1,122 @@
 <!-- Segoe Print -->
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首頁</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-    	body {font-family: 微軟正黑體}
+        body {
+            font-family: 微軟正黑體
+        }
     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-default">        
-      <div class="container-fluid">
-        <div class="navbar-header">
-		  <a class="navbar-brand" href="index.html">資料庫系統</a>
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">資料庫系統</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">導覽按鈕</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-          </button>          
+          </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">首頁</a></li>
+                    <li><a href="query.html">查詢資訊</a></li>
+                    <li><a href="edit.html">修改資訊</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group has-feedback">
+                        <input type="search" class="form-control" placeholder="search"><span class="glyphicon-search form-control-feedback"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">搜尋</button>
+                </form>
+            </div>
         </div>
-		<div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-		    <li class="active"><a href="index.html">首頁</a></li>
-            <li><a href="query.html">查詢資訊</a></li>
-			<li><a href="edit.html">修改資訊</a></li>
-          </ul>
-		  
-		  <form class="navbar-form navbar-right">
-			<div class="form-group has-feedback">
-				<input type="search" class="form-control" placeholder="search"><span class="glyphicon-search form-control-feedback"></span>
-			</div>
-			<button type="submit" class="btn btn-default">搜尋</button>
-		  </form>
-		</div>
-	  </div>
-	</nav>
-	
-	<h4 style="color:blue">☆本頁面與內頁皆適用小屏幕裝置</h4>
-	<!--頁首-->
-	<header>
-		<div class="container">
-			<h1 style="text-align:center" >海大書局</h1>
-			<p class="lead" style="text-align:center">NTOU bookstore</p>
-			<hr>
-		</div>
-	</header>
-	<!--內容區-->
-	<div class="container">
-		<div class="row">
-			<article>
-				<div class="col-sm-12">
-					<div id="myCarousel" class="carousel slide">
-					<!-- 輪播指示 -->
- 			     <ol class="carousel-indicators">
-  			      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
- 			       <li data-target="#myCarousel" data-slide-to="1"></li>
- 			       <li data-target="#myCarousel" data-slide-to="2"></li>
- 			     </ol>
+    </nav>
 
-  			    <!-- 輪播內容 -->
-  			    <div class="carousel-inner">
-					<div class="item active">
-  					  <img src="img01.jpg" width="100%" class="img-thumbnail">
-  			        <div class="carousel-caption">
- 			           <h1 style="color:red">National Taiwan Ocean University</h1>
-  			        </div>          
-  			      </div>	
-					
-					<div class="item">
-  			        <img src="img01.jpg" width="100%" class="img-thumbnail">
-   			       <div class="carousel-caption">
-   			         <h1 style="color:red">National Taiwan Ocean University</h1>
-   			       </div>
-  			      </div>
-					
-					<div class="item">
-     			     <img src="img01.jpg" width="100%" class="img-thumbnail">
-    			      <div class="carousel-caption">
-   			         <h1 style="color:red">National Taiwan Ocean University</h1>
-   			       </div>
-   			     </div>
-					
-  			    </div>
+    <h4 style="color:blue">☆本頁面與內頁皆適用小屏幕裝置</h4>
+    <!--頁首-->
+    <header>
+        <div class="container">
+            <h1 style="text-align:center">海大書局</h1>
+            <p class="lead" style="text-align:center">NTOU bookstore</p>
+            <hr>
+        </div>
+    </header>
+    <!--內容區-->
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="col-sm-12">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- 輪播指示 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
 
-    			  <!-- 輪播控制 -->
-   			   <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-  			      <span class="glyphicon glyphicon-chevron-left"></span></a>
-  			    <a class="carousel-control right" href="#myCarousel" data-slide="next">
- 			       <span class="glyphicon glyphicon-chevron-right"></span></a>
-  			  </div>
-				
-				</div>
-			</article>
-			
-			<aside>
-				<div class="col-sm-6">
-					<div class="panel panel-warning">
-						<div class="panel-heading">
-							<h3>書籍種類</h3>
-						</div>
-						
-						<div class="panel-body">
-							<ul>
-								<li>種類xxx</li>
-								<li>種類xxx</li>
-								<li>種類xxx</li>
-								<li>種類xxx</li>
-								<!-- <li>元智熱舞十元盃比賽10/17</li>
+                        <!-- 輪播內容 -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img01.jpg" width="100%" class="img-thumbnail">
+                                <div class="carousel-caption">
+                                    <h1 style="color:red">National Taiwan Ocean University</h1>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="img01.jpg" width="100%" class="img-thumbnail">
+                                <div class="carousel-caption">
+                                    <h1 style="color:red">National Taiwan Ocean University</h1>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="img01.jpg" width="100%" class="img-thumbnail">
+                                <div class="carousel-caption">
+                                    <h1 style="color:red">National Taiwan Ocean University</h1>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 輪播控制 -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+
+                </div>
+            </article>
+
+            <aside>
+                <div class="col-sm-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3>書籍種類</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul id="classifictation_content">
+                                <li>種類xxx</li>
+                                <li>種類xxx</li>
+                                <li>種類xxx</li>
+                                <li>種類xxx</li>
+                                <!-- <li>元智熱舞十元盃比賽10/17</li>
 								<li>期末成發12/19</li>
 								<li>寒假：
 									<ol type="I">
@@ -120,42 +124,87 @@
 										<li>寒訓盃</li>
 									</ol>
 								</li> -->
-							</ul>
-						</div>	
-					</div>
-				</div>
-				
-				
-				<div class="col-sm-6">
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<h3>銷售排行</h3>
-						</div>
-							
-						
-						<div class="panel-body">
-							<ul>
-								<li>書名xxx</li>
-								<li>書名xxx</li>
-								<li>書名xxx</li>
-								<li>書名xxx</li>
-								<li>書名xxx</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-					
-				
-			</aside>
-		</div>	
-	</div>
-	<hr>
-	<!--頁尾-->
-	<hr>
-	<footer>
-		<div class="container">
-			<p>♂海洋大學3A&middot;♀ 作者: 吳秉宸.吳翊楷.謝翔宇</p><p style="text-align:right"><a href="#">T O P</a></p>
-		</div>
-	</footer>
-  </body>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3>銷售排行</h3>
+                        </div>
+
+
+                        <div class="panel-body">
+                            <ul>
+                                <li>書名xxx</li>
+                                <li>書名xxx</li>
+                                <li>書名xxx</li>
+                                <li>書名xxx</li>
+                                <li>書名xxx</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </aside>
+        </div>
+    </div>
+    <hr>
+    <!--頁尾-->
+    <hr>
+    <footer>
+        <div class="container">
+            <p>♂海洋大學3A&middot;♀ 作者: 吳秉宸.吳翊楷.謝翔宇</p>
+            <p style="text-align:right"><a href="#">T O P</a></p>
+        </div>
+    </footer>
+</body>
+<script>
+    /*php_connect*/
+    function php_connect(php_name, func) {
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            func(xmlhttp);
+        };
+        xmlhttp.open("GET", php_name);
+        xmlhttp.send();
+    }
+
+    // function mytest_func(xmlhttp) { //xmlhttp為回傳出來的物件
+    //     document.getElementById("txtHint").innerHTML =
+    //         xmlhttp.responseText;
+    // }
+
+    // function showHint(str) {
+    //     if (str.length == 0) {
+    //         document.getElementById("txtHint").innerHTML = "";
+    //         return;
+    //     }
+    //     php_connect("gethint.php?q=" + str, mytest_func);
+    // }
+    function show_storage_classification_php_do(xmlhttp) {
+        document.getElementById("classifictation_content").innerHTML = "";
+        var arr = JSON.parse(xmlhttp.responseText);
+        // console.log(arr);
+        var html = "";
+        for (var i = 0; i < arr.length; i++) {
+            html += '<li>' + arr[i][0] + '</li>\n';
+        }
+        document.getElementById("classifictation_content").innerHTML = html;
+    }
+
+    function show_storage_classification() {
+        php_connect("PHP/Storage_Classification.php", show_storage_classification_php_do);
+    }
+
+    function init() {
+        show_storage_classification();
+    }
+    window.onload = init();
+</script>
+
 </html>
