@@ -1,6 +1,5 @@
 <?php
     include "db_conn.php";
-    
     $query = ("SELECT BookName 
 	FROM deal 
     NATURAL JOIN storage 
