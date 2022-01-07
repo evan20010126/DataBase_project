@@ -11,4 +11,5 @@
     catch(Exception $e){ //若上述程式碼出現錯誤，便會執行以下動作
         echo json_encode(array());
     }
+    //若查無則輸出空陣列
 ?>
