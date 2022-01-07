@@ -200,7 +200,11 @@
     function show_storage_classification() {
         php_connect("PHP/Storage_Classification.php", show_storage_classification_php_do);
     }
-    window.onload = show_storage_classification;
+
+    function init() {
+        show_storage_classification();
+    }
+    window.onload = init();
 </script>
 
 </html>
