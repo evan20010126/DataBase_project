@@ -11,5 +11,10 @@
         Print "ERROR!: " . $e->getMessage();
         die();
     }
+
+    //<<<<<<< HEAD
     //main
+//=======
+    //add
+//>>>>>>> Adam
 ?>
