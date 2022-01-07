@@ -1,6 +1,5 @@
 <?php
-    include "db_conn.php";
-    
+    include "db_conn.php";  
     try{
         $query = ("SELECT distinct Classification FROM storage");
         $stmt = $db->prepare($query);    //db為db_conn_sofware.php新建的連線物件 
