@@ -9,6 +9,6 @@
         echo json_encode($result); //回傳json格式
     }
     catch(Exception $e){ //若上述程式碼出現錯誤，便會執行以下動作
-        echo json_encode();
+        echo json_encode(array());
     }
 ?>
