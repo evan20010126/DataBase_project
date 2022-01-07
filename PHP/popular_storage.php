@@ -2,7 +2,8 @@
     include "db_conn.php";
     
     $query = ("SELECT BookName 
-	FROM deal
+	FROM deal,storage 
+    WHERE storage.BookID=deal.BookID 
 	GROUP BY BookName
 	ORDER BY sum(DealAmount) desc");
     $stmt = $db->prepare($query);    //db為db_conn_sofware.php新建的連線物件 
