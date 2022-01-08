@@ -1,8 +1,8 @@
 <?php       /*記得第五行[DealID] 改成由前端網頁輸入*/
     include "db_conn.php";
-    $Attribute=$_REQUEST["a"];
-    $value=$_REQUEST["b"];
-    $BuyerID=$_REQUEST["c"];
+    $Attribute=$_REQUEST["b"];
+    $value=$_REQUEST["c"];
+    $BuyerID=$_REQUEST["a"];
     
     $query = ("UPDATE buyer SET " . strval($Attribute) . " =  ? WHERE BuyerID = ?"); 
     try{
