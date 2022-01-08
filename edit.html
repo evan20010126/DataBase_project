@@ -116,18 +116,18 @@
                                 <div class="panel-footer">
                                     <div class="panel panel-warning">
                                         <h3 style="color: navy;"><b>新增</b></h3>
-                                        BookName: <input type="text"><br><br> Price: <input type="text"><br><br> Classification: <input type="text"><br><br> StoreNumber: <input type="text"><br><br>
-                                        <button class="btn btn-primary">Submit</button>
+                                        BookName: <input type="text" id="new_book_a"><br><br> Price: <input type="text" id="new_book_b"><br><br> Classification: <input type="text" id="new_book_c"><br><br> StoreNumber: <input type="text" id="new_book_d"><br><br>
+                                        <button class="btn btn-primary" type="button" id="new_book_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-success">
                                         <h3 style="color: red;"><b>刪除</b></h3>
-                                        BookName (假設BookName不會重複): <input type="text"><br><br>
-                                        <button class="btn btn-danger">Submit</button>
+                                        BookName (假設BookName不會重複): <input type="text" id="delete_book_a"><br><br>
+                                        <button class="btn btn-danger" type="button" id="delete_book_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-danger">
                                         <h3 style="color:saddlebrown;"><b>修改</b></h3>
-                                        欲修改的BookName: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
-                                        <button class="btn btn-warning">Submit</button>
+                                        欲修改的BookName: <input type="text" id="edit_book_a"><br><br> 其中的Attribute: <input type="text" id="edit_book_b"><br><br> 更改後的Value: <input type="text" id="edit_book_c"><br><br>
+                                        <button class="btn btn-warning" type="button" id="edit_book_btn">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -181,18 +181,18 @@
                                 <div class="panel-footer">
                                     <div class="panel panel-warning">
                                         <h3 style="color: navy;"><b>新增</b></h3>
-                                        Buyer Name: <input type="text"><br><br> Buyer Phone: <input type="text"><br><br> Buyer Address: <input type="text"><br><br>
-                                        <button class="btn btn-primary">Submit</button>
+                                        Buyer Name: <input type="text" id="new_buyer_a"><br><br> Buyer Phone: <input type="text" id="new_buyer_b"><br><br> Buyer Address: <input type="text" id="new_buyer_c"><br><br>
+                                        <button class="btn btn-primary" type="button" id="new_buyer_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-success">
                                         <h3 style="color: red;"><b>刪除</b></h3>
-                                        Buyer ID: <input type="text"><br><br>
-                                        <button class="btn btn-danger">Submit</button>
+                                        Buyer ID: <input type="text" id="delete_buyer_a"><br><br>
+                                        <button class="btn btn-danger" type="button" id="delete_buyer_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-danger">
                                         <h3 style="color:saddlebrown;"><b>修改</b></h3>
-                                        欲修改的BuyerID: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
-                                        <button class="btn btn-warning">Submit</button>
+                                        欲修改的BuyerID: <input type="text" id="edit_buyer_a"><br><br> 其中的Attribute: <input type="text" id="edit_buyer_b"><br><br> 更改後的Value: <input type="text" id="edit_buyer_c"><br><br>
+                                        <button class="btn btn-warning" type="button" id="edit_buyer_btn">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -209,10 +209,10 @@
                                         <table class="table table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Deal ID</th>
-                                                    <th scope="col">Book Name</th>
-                                                    <th scope="col">Buyer ID</th>
-                                                    <th scope="col">Deal Amount</th>
+                                                    <th scope="col">DealID</th>
+                                                    <th scope="col">BookID</th>
+                                                    <th scope="col">BuyerID</th>
+                                                    <th scope="col">DealAmount</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="Summary_deal">
@@ -246,18 +246,18 @@
                                 <div class="panel-footer">
                                     <div class="panel panel-warning">
                                         <h3 style="color: navy;"><b>新增</b></h3>
-                                        BookName: <input type="text"><br><br> Buyer ID: <input type="text"><br><br> Deal Amount: <input type="text"><br><br>
-                                        <button class="btn btn-primary">Submit</button>
+                                        BookID: <input type="text" id="new_deal_a"><br><br> Buyer ID: <input type="text" id="new_deal_b"><br><br> Deal Amount: <input type="text" id="new_deal_c"><br><br>
+                                        <button class="btn btn-primary" type="button" id="new_deal_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-success">
                                         <h3 style="color: red;"><b>刪除</b></h3>
-                                        Deal ID: <input type="text"><br><br>
-                                        <button class="btn btn-danger">Submit</button>
+                                        Deal ID: <input type="text" id="delete_deal_a"><br><br>
+                                        <button class="btn btn-danger" type="button" id="delete_deal_btn">Submit</button>
                                     </div>
                                     <div class="panel panel-danger">
                                         <h3 style="color:saddlebrown;"><b>修改</b></h3>
-                                        欲修改的Deal ID: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
-                                        <button class="btn btn-warning">Submit</button>
+                                        欲修改的Deal ID: <input type="text" id="edit_deal_a"><br><br> 其中的Attribute: <input type="text" id="edit_deal_b"><br><br> 更改後的Value: <input type="text" id="edit_deal_c"><br><br>
+                                        <button class="btn btn-warning" type="button" id="edit_deal_btn">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -347,8 +347,128 @@
             function show_all_buyer() {
                 php_connect("PHP/display_all_buyer.php", show_all_buyer_php_do);
             }
+
+            //for_book
             /*----------------------------*/
+            function new_book_php_do(xmlhttp) {
+                alert("New book sucess!");
+            }
+
+            function new_book() {
+                var a = document.getElementById("new_book_a").value;
+                var b = document.getElementById("new_book_b").value;
+                var c = document.getElementById("new_book_c").value;
+                var d = document.getElementById("new_book_d").value;
+                php_connect("PHP/add_new_book.php?a=" + a + "&b=" + b + "&c=" + c + "&d=" + d, new_book_php_do);
+                show_all_books();
+            }
+            /*----------------------------*/
+            function delete_book_php_do(xmlhttp) {
+                alert("Delete book sucess!");
+            }
+
+            function delete_book() {
+                var a = document.getElementById("delete_book_a").value;
+                php_connect("PHP/delete_book.php?a=" + a, delete_book_php_do);
+                show_all_books();
+            }
+            /*----------------------------*/
+            function edit_book_php_do(xmlhttp) {
+                alert("Edit book sucess!");
+            }
+
+            function edit_book() {
+                var a = document.getElementById("edit_book_a").value;
+                var b = document.getElementById("edit_book_b").value;
+                var c = document.getElementById("edit_book_c").value;
+                php_connect("PHP/edit_book_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_book_php_do);
+                show_all_books();
+            }
+
+            //for_buyer
+            /*----------------------------*/
+            function new_buyer_php_do(xmlhttp) {
+                alert("New buyer sucess!");
+            }
+
+            function new_buyer() {
+                var a = document.getElementById("new_buyer_a").value;
+                var b = document.getElementById("new_buyer_b").value;
+                var c = document.getElementById("new_buyer_c").value;
+                php_connect("PHP/add_new_buyer.php?a=" + a + "&b=" + b + "&c=" + c, new_buyer_php_do);
+                show_all_buyer();
+            }
+            /*----------------------------*/
+            function delete_buyer_php_do(xmlhttp) {
+                alert("Delete buyer sucess!");
+            }
+
+            function delete_buyer() {
+                var a = document.getElementById("delete_buyer_a").value;
+                php_connect("PHP/delete_buyer.php?a=" + a, delete_buyer_php_do);
+                show_all_buyer();
+            }
+            /*----------------------------*/
+            function edit_buyer_php_do(xmlhttp) {
+                alert("Edit buyer sucess!");
+            }
+
+            function edit_buyer() {
+                var a = document.getElementById("edit_buyer_a").value;
+                var b = document.getElementById("edit_buyer_b").value;
+                var c = document.getElementById("edit_buyer_c").value;
+                php_connect("PHP/edit_buyer_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_buyer_php_do);
+                show_all_buyer();
+            }
+
+            //for_deal
+            /*----------------------------*/
+            function new_deal_php_do(xmlhttp) {
+                alert("New deal sucess!");
+            }
+
+            function new_deal() {
+                var a = document.getElementById("new_deal_a").value;
+                var b = document.getElementById("new_deal_b").value;
+                var c = document.getElementById("new_deal_c").value;
+                php_connect("PHP/add_new_deal.php?a=" + a + "&b=" + b + "&c=" + c, new_deal_php_do);
+                show_all_deals();
+            }
+            /*----------------------------*/
+            function delete_deal_php_do(xmlhttp) {
+                alert("Delete deal sucess!");
+            }
+
+            function delete_deal() {
+                var a = document.getElementById("delete_deal_a").value;
+                php_connect("PHP/delete_deal.php?a=" + a, delete_deal_php_do);
+                show_all_deals();
+            }
+            /*----------------------------*/
+            function edit_deal_php_do(xmlhttp) {
+                alert("Edit deal sucess!");
+            }
+
+            function edit_deal() {
+                var a = document.getElementById("edit_deal_a").value;
+                var b = document.getElementById("edit_deal_b").value;
+                var c = document.getElementById("edit_deal_c").value;
+                php_connect("PHP/edit_deal_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_deal_php_do);
+                show_all_daels();
+            }
+
             function init() {
+                document.getElementById("new_book_btn").onclick = new_book;
+                document.getElementById("delete_book_btn").onclick = delete_book;
+                document.getElementById("edit_book_btn").onclick = edit_book;
+
+                document.getElementById("new_buyer_btn").onclick = new_buyer;
+                document.getElementById("delete_buyer_btn").onclick = delete_buyer;
+                document.getElementById("edit_buyer_btn").onclick = edit_buyer;
+
+                document.getElementById("new_deal_btn").onclick = new_deal;
+                document.getElementById("delete_deal_btn").onclick = delete_deal;
+                document.getElementById("edit_deal_btn").onclick = edit_deal;
                 show_all_books();
                 show_all_buyer();
                 show_all_deals();
