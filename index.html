@@ -138,7 +138,7 @@
 
 
                         <div class="panel-body">
-                            <ul>
+                            <ul id="popular_content">
                                 <li>書名xxx</li>
                                 <li>書名xxx</li>
                                 <li>書名xxx</li>
@@ -186,6 +186,7 @@
     //     }
     //     php_connect("gethint.php?q=" + str, mytest_func);
     // }
+    /*-----------------------*/
     function show_storage_classification_php_do(xmlhttp) {
         document.getElementById("classifictation_content").innerHTML = "";
         var arr = JSON.parse(xmlhttp.responseText);
@@ -200,9 +201,25 @@
     function show_storage_classification() {
         php_connect("PHP/Storage_Classification.php", show_storage_classification_php_do);
     }
+    /*-----------------------*/
+    function show_popular_stroage_php_do(xmlhttp) {
+        document.getElementById("popular_content").innerHTML = "";
+        var arr = JSON.parse(xmlhttp.responseText);
+        // console.log(arr);
+        var html = "";
+        for (var i = 0; i < arr.length; i++) {
+            html += '<li>' + arr[i][0] + '</li>\n';
+        }
+        document.getElementById("popular_content").innerHTML = html;
+    }
 
+    function show_popular_stroage() {
+        php_connect("PHP/popular_storage.php", show_popular_stroage_php_do);
+    }
+    /*-----------------------*/
     function init() {
         show_storage_classification();
+        show_popular_stroage();
     }
     window.onload = init();
 </script>
