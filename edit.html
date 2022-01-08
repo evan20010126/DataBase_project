@@ -1,293 +1,360 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>修改資訊</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-    	body {font-family: 微軟正黑體;}
-
+        body {
+            font-family: 微軟正黑體;
+        }
     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-default">        
-      <div class="container-fluid">
-        <div class="navbar-header">
-		  <a class="navbar-brand" href="index.html">資料庫系統</a>
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">資料庫系統</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">導覽按鈕</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-          </button>          
-        </div>
-		<div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-		    <li><a href="index.html">首頁</a></li>
-            <li><a href="query.html">查詢資訊</a></li>
-			<li class="active"><a href="edit.html">修改資訊</a></li>
-          </ul>
-		  
-		  <form class="navbar-form navbar-right">
-			<div class="form-group has-feedback">
-				<input type="search" class="form-control" placeholder="search"><span class="glyphicon-search form-control-feedback"></span>
-			</div>
-			<button type="submit" class="btn btn-default">搜尋</button>
-		  </form>
-		</div>
-	  </div>
-	</nav>
-	
-	<!--頁首-->
-	<header>
-		<div class="container">
-			<h1>修改資訊</h1>
-			<p class="lead">Clerk can edit something with this web.</p>
-			<hr>
-		</div>
-	</header>
-	<!--內容區-->
-	<div class="container">
-		<div class="row">
-			<article>
-				<div class="col-sm-12">
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab1" data-toggle="tab">書籍</a></li>	
-					<li ><a href="#tab2" data-toggle="tab">買家</a></li>
-					<li ><a href="#tab3" data-toggle="tab">訂單</a></li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane fade in active" id="tab1">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h1>書籍</h1>
-								<br>
-							</div>
-							<div class="panel-body">
-								<div style="height:250px;overflow:auto;">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-											<th scope="col">BookID</th>
-											<th scope="col">BookName</th>
-											<th scope="col">Price</th>
-											<th scope="col">Classification</th>
-											<th scope="col">StoreNumber</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-											<th scope="row">1</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-											<td>@mdo</td>
-											</tr>
-											<tr>
-											<th scope="row">2</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-											<td>@mdo</td>
-											</tr>
-											<tr>
-											<th scope="row">3</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-											<td>@mdo</td>
-											</tr>
-											<tr>	
-										</tbody>
-									</table>
-								</div>
-								<form>
-									<!-- <h4>欲查詢書籍種類：<input type="text"></h4>
-									<button class="btn btn-warning" style="float: right;">搜尋 Search</button> -->
-								</form>
-							</div>
-							<div class="panel-footer">
-								<div class="panel panel-warning">
-									<h3 style="color: navy;"><b>新增</b></h3>
-									BookName: <input type="text"><br><br>
-									Price: <input type="text"><br><br>
-									Classification: <input type="text"><br><br>
-									StoreNumber: <input type="text"><br><br>
-									<button class="btn btn-primary">Submit</button>
-								</div>
-								<div class="panel panel-success">
-									<h3 style="color: red;"><b>刪除</b></h3>
-									BookName (假設BookName不會重複): <input type="text"><br><br>
-									<button class="btn btn-danger">Submit</button>
-								</div>
-								<div class="panel panel-danger">
-									<h3 style="color:saddlebrown;"><b>修改</b></h3>
-									欲修改的BookName: <input type="text"><br><br>
-									其中的Attribute: <input type="text"><br><br>
-									更改後的Value: <input type="text"><br><br>
-									<button class="btn btn-warning">Submit</button>
-								</div>
-							</div>	
-						</div>
-					</div>
-				
-					<div class="tab-pane fade" id="tab2">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h1>買家</h1>
-								<br>
-							</div>
-							<div class="panel-body">
-								<div style="height:250px;overflow:auto;">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-											<th scope="col">Buyer ID</th>
-											<th scope="col">Buyer Name</th>
-											<th scope="col">Buyer Phone</th>
-											<th scope="col">Buyer Address</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-											<th scope="row">1</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-											</tr>
-											<tr>
-											<th scope="row">2</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-											</tr>
-											<tr>
-											<th scope="row">3</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-											</tr>
-											<tr>	
-										</tbody>
-									</table>
-								</div>
-								<form>
-									<!-- <h4>欲查詢書籍種類：<input type="text"></h4>
-									<button class="btn btn-warning" style="float: right;">搜尋 Search</button> -->
-								</form>
-							</div>
-							<div class="panel-footer">
-								<div class="panel panel-warning">
-									<h3 style="color: navy;"><b>新增</b></h3>
-									Buyer Name: <input type="text"><br><br>
-									Buyer Phone: <input type="text"><br><br>
-									Buyer Address: <input type="text"><br><br>
-									<button class="btn btn-primary">Submit</button>
-								</div>
-								<div class="panel panel-success">
-									<h3 style="color: red;"><b>刪除</b></h3>
-									Buyer ID: <input type="text"><br><br>
-									<button class="btn btn-danger">Submit</button>
-								</div>
-								<div class="panel panel-danger">
-									<h3 style="color:saddlebrown;"><b>修改</b></h3>
-									欲修改的BuyerID: <input type="text"><br><br>
-									其中的Attribute: <input type="text"><br><br>
-									更改後的Value: <input type="text"><br><br>
-									<button class="btn btn-warning">Submit</button>
-								</div>
-							</div>		
-						</div>
-					</div>
+          </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="query.html">查詢資訊</a></li>
+                    <li class="active"><a href="edit.html">修改資訊</a></li>
+                </ul>
 
-					<div class="tab-pane fade" id="tab3">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h1>訂單</h1>
-								<br>
-							</div>
-							<div class="panel-body">
-								<div style="height:250px;overflow:auto;">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-											<th scope="col">Deal ID</th>
-											<th scope="col">Book Name</th>
-											<th scope="col">Buyer ID</th>
-											<th scope="col">Deal Amount</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-											<th scope="row">1</th>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-											</tr>
-											<tr>
-											<th scope="row">2</th>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-											</tr>
-											<tr>
-											<th scope="row">3</th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-											</tr>
-											<tr>	
-										</tbody>
-									</table>
-								</div>
-								<form>
-									<!-- <h4>欲查詢書籍種類：<input type="text"></h4>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group has-feedback">
+                        <input type="search" class="form-control" placeholder="search"><span class="glyphicon-search form-control-feedback"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">搜尋</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--頁首-->
+    <header>
+        <div class="container">
+            <h1>修改資訊</h1>
+            <p class="lead">Clerk can edit something with this web.</p>
+            <hr>
+        </div>
+    </header>
+    <!--內容區-->
+    <div class="container">
+        <div class="row">
+            <article>
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">書籍</a></li>
+                        <li><a href="#tab2" data-toggle="tab">買家</a></li>
+                        <li><a href="#tab3" data-toggle="tab">訂單</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h1>書籍</h1>
+                                    <br>
+                                </div>
+                                <div class="panel-body">
+                                    <div style="height:250px;overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">BookID</th>
+                                                    <th scope="col">BookName</th>
+                                                    <th scope="col">Price</th>
+                                                    <th scope="col">Classification</th>
+                                                    <th scope="col">StoreNumber</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="Summary">
+                                                <!-- <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <form>
+                                        <!-- <h4>欲查詢書籍種類：<input type="text"></h4>
 									<button class="btn btn-warning" style="float: right;">搜尋 Search</button> -->
-								</form>
-							</div>
-							<div class="panel-footer">
-								<div class="panel panel-warning">
-									<h3 style="color: navy;"><b>新增</b></h3>
-									BookName: <input type="text"><br><br>
-									Buyer ID: <input type="text"><br><br>
-									Deal Amount: <input type="text"><br><br>
-									<button class="btn btn-primary">Submit</button>
-								</div>
-								<div class="panel panel-success">
-									<h3 style="color: red;"><b>刪除</b></h3>
-									Deal ID: <input type="text"><br><br>
-									<button class="btn btn-danger">Submit</button>
-								</div>
-								<div class="panel panel-danger">
-									<h3 style="color:saddlebrown;"><b>修改</b></h3>
-									欲修改的Deal ID: <input type="text"><br><br>
-									其中的Attribute: <input type="text"><br><br>
-									更改後的Value: <input type="text"><br><br>
-									<button class="btn btn-warning">Submit</button>
-								</div>
-							</div>	
-						</div>
-					</div>
-				</div>
-			</article>
-		</div>	
-	</div>
-	<hr>
-	
-	
-	
-	<!--頁尾-->
-	<footer>
-		<div class="container">
-			<p>♂海洋大學3A&middot;♀ 作者: 吳秉宸.吳翊楷.謝翔宇</p><p style="text-align:right"><a href="#">T O P</a></p>
-		</div>
-	</footer>
-	
-	
-	
-  </body>
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="panel panel-warning">
+                                        <h3 style="color: navy;"><b>新增</b></h3>
+                                        BookName: <input type="text"><br><br> Price: <input type="text"><br><br> Classification: <input type="text"><br><br> StoreNumber: <input type="text"><br><br>
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <h3 style="color: red;"><b>刪除</b></h3>
+                                        BookName (假設BookName不會重複): <input type="text"><br><br>
+                                        <button class="btn btn-danger">Submit</button>
+                                    </div>
+                                    <div class="panel panel-danger">
+                                        <h3 style="color:saddlebrown;"><b>修改</b></h3>
+                                        欲修改的BookName: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
+                                        <button class="btn btn-warning">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h1>買家</h1>
+                                    <br>
+                                </div>
+                                <div class="panel-body">
+                                    <div style="height:250px;overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Buyer ID</th>
+                                                    <th scope="col">Buyer Name</th>
+                                                    <th scope="col">Buyer Phone</th>
+                                                    <th scope="col">Buyer Address</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="Summary_buyer">
+                                                <!-- <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <form>
+                                        <!-- <h4>欲查詢書籍種類：<input type="text"></h4>
+									<button class="btn btn-warning" style="float: right;">搜尋 Search</button> -->
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="panel panel-warning">
+                                        <h3 style="color: navy;"><b>新增</b></h3>
+                                        Buyer Name: <input type="text"><br><br> Buyer Phone: <input type="text"><br><br> Buyer Address: <input type="text"><br><br>
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <h3 style="color: red;"><b>刪除</b></h3>
+                                        Buyer ID: <input type="text"><br><br>
+                                        <button class="btn btn-danger">Submit</button>
+                                    </div>
+                                    <div class="panel panel-danger">
+                                        <h3 style="color:saddlebrown;"><b>修改</b></h3>
+                                        欲修改的BuyerID: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
+                                        <button class="btn btn-warning">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h1>訂單</h1>
+                                    <br>
+                                </div>
+                                <div class="panel-body">
+                                    <div style="height:250px;overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Deal ID</th>
+                                                    <th scope="col">Book Name</th>
+                                                    <th scope="col">Buyer ID</th>
+                                                    <th scope="col">Deal Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="Summary_deal">
+                                                <!-- <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr> -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <form>
+                                        <!-- <h4>欲查詢書籍種類：<input type="text"></h4>
+									<button class="btn btn-warning" style="float: right;">搜尋 Search</button> -->
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="panel panel-warning">
+                                        <h3 style="color: navy;"><b>新增</b></h3>
+                                        BookName: <input type="text"><br><br> Buyer ID: <input type="text"><br><br> Deal Amount: <input type="text"><br><br>
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <h3 style="color: red;"><b>刪除</b></h3>
+                                        Deal ID: <input type="text"><br><br>
+                                        <button class="btn btn-danger">Submit</button>
+                                    </div>
+                                    <div class="panel panel-danger">
+                                        <h3 style="color:saddlebrown;"><b>修改</b></h3>
+                                        欲修改的Deal ID: <input type="text"><br><br> 其中的Attribute: <input type="text"><br><br> 更改後的Value: <input type="text"><br><br>
+                                        <button class="btn btn-warning">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+            </div>
+        </div>
+        <hr>
+
+
+
+        <!--頁尾-->
+        <footer>
+            <div class="container">
+                <p>♂海洋大學3A&middot;♀ 作者: 吳秉宸.吳翊楷.謝翔宇</p>
+                <p style="text-align:right"><a href="#">T O P</a></p>
+            </div>
+        </footer>
+        <script>
+            /*php_connect*/
+            function php_connect(php_name, func) {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function() {
+                    func(xmlhttp);
+                };
+                xmlhttp.open("GET", php_name);
+                xmlhttp.send();
+            }
+
+            function show_all_books_php_do(xmlhttp) {
+                var arr = JSON.parse(xmlhttp.responseText);
+                document.getElementById("Summary").innerHTML = "";
+                var html = "";
+                for (var i = 0; i < arr.length; i++) {
+                    html += "<tr>\n";
+                    html += "<th>" + arr[i][0] + "</th>\n";
+                    for (var j = 1; j < Object.keys(arr[i]).length; j++) {
+                        if (arr[i][j] == undefined) break;
+                        html += "<td>" + arr[i][j] + "</td>\n";
+                    }
+                    html += "</tr>\n"
+                }
+                document.getElementById("Summary").innerHTML = html;
+            }
+
+            function show_all_books() {
+                php_connect("PHP/display_all_books.php", show_all_books_php_do);
+            }
+            /*-----------------------------------*/
+            function show_all_deal_php_do(xmlhttp) {
+                var arr = JSON.parse(xmlhttp.responseText);
+                document.getElementById("Summary_deal").innerHTML = "";
+                var html = "";
+                for (var i = 0; i < arr.length; i++) {
+                    html += "<tr>\n";
+                    html += "<th>" + arr[i][0] + "</th>\n";
+                    for (var j = 1; j < Object.keys(arr[i]).length; j++) {
+                        if (arr[i][j] == undefined) break;
+                        html += "<td>" + arr[i][j] + "</td>\n";
+                    }
+                    html += "</tr>\n"
+                }
+                document.getElementById("Summary_deal").innerHTML = html;
+            }
+
+            function show_all_deals() {
+                php_connect("PHP/display_all_deal.php", show_all_deal_php_do);
+            }
+            /*----------------------------*/
+            function show_all_buyer_php_do(xmlhttp) {
+                var arr = JSON.parse(xmlhttp.responseText);
+                document.getElementById("Summary_buyer").innerHTML = "";
+                var html = "";
+                for (var i = 0; i < arr.length; i++) {
+                    html += "<tr>\n";
+                    html += "<th>" + arr[i][0] + "</th>\n";
+                    for (var j = 1; j < Object.keys(arr[i]).length; j++) {
+                        if (arr[i][j] == undefined) break;
+                        html += "<td>" + arr[i][j] + "</td>\n";
+                    }
+                    html += "</tr>\n"
+                }
+                document.getElementById("Summary_buyer").innerHTML = html;
+            }
+
+            function show_all_buyer() {
+                php_connect("PHP/display_all_buyer.php", show_all_buyer_php_do);
+            }
+            /*----------------------------*/
+            function init() {
+                show_all_books();
+                show_all_buyer();
+                show_all_deals();
+            }
+            window.onload = init;
+        </script>
+</body>
+
 </html>
