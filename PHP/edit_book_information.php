@@ -1,8 +1,8 @@
 <?php       /*記得第五行[DealID] 改成由前端網頁輸入*/
     include "db_conn.php";
-    $Attribute=$_REQUEST["a"];
-    $value=$_REQUEST["b"];
-    $book_name=$_REQUEST["c"];
+    $Attribute=$_REQUEST["b"];
+    $value=$_REQUEST["c"];
+    $book_name=$_REQUEST["a"];
     
     $query = ("UPDATE storage SET " . strval($Attribute) . " =  ? WHERE BookName = ?"); 
     try{
