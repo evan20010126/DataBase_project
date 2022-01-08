@@ -98,6 +98,26 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <center>
+                        <h2>訂單總攬</h2>
+                    </center>
+                    <div style="height:250px;overflow:auto;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Deal ID</th>
+                                    <th scope="col">Book Name</th>
+                                    <th scope="col">Buyer ID</th>
+                                    <th scope="col">Deal Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Summary_deal">
+                                <!--  -->
+                            </tbody>
+                        </table>
+                    </div>
+
                     <hr>
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab1" data-toggle="tab">查詢書籍</a></li>
@@ -254,6 +274,26 @@
     function show_all_books() {
         php_connect("PHP/display_all_books.php", show_all_books_php_do);
     }
+    /*-----------------------------------*/
+    function show_all_deal_php_do(xmlhttp) {
+        var arr = JSON.parse(xmlhttp.responseText);
+        document.getElementById("Summary_deal").innerHTML = "";
+        var html = "";
+        for (var i = 0; i < arr.length; i++) {
+            html += "<tr>\n";
+            html += "<th>" + arr[i][0] + "</th>\n";
+            for (var j = 1; j < Object.keys(arr[i]).length; j++) {
+                if (arr[i][j] == undefined) break;
+                html += "<td>" + arr[i][j] + "</td>\n";
+            }
+            html += "</tr>\n"
+        }
+        document.getElementById("Summary_deal").innerHTML = html;
+    }
+
+    function show_all_deals() {
+        php_connect("PHP/display_all_deal.php", show_all_deal_php_do);
+    }
     /*----------------------------*/
     // <tr>
     // 	<th scope="row">1</th>
@@ -314,6 +354,7 @@
         document.getElementById("search_classification_btn").onclick = show_selected_classification;
         document.getElementById("search_phone_btn").onclick = show_deal_phonenumber;
         show_all_books();
+        show_all_deals();
     }
     window.onload = init;
 </script>
