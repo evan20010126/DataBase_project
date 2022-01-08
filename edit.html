@@ -360,7 +360,9 @@
                 var c = document.getElementById("new_book_c").value;
                 var d = document.getElementById("new_book_d").value;
                 php_connect("PHP/add_new_book.php?a=" + a + "&b=" + b + "&c=" + c + "&d=" + d, new_book_php_do);
-                show_all_books();
+                setTimeout(function() {
+                    show_all_books();
+                }, 3000);
             }
             /*----------------------------*/
             function delete_book_php_do(xmlhttp) {
@@ -370,7 +372,9 @@
             function delete_book() {
                 var a = document.getElementById("delete_book_a").value;
                 php_connect("PHP/delete_book.php?a=" + a, delete_book_php_do);
-                show_all_books();
+                setTimeout(function() {
+                    show_all_books();
+                }, 3000);
             }
             /*----------------------------*/
             function edit_book_php_do(xmlhttp) {
@@ -382,7 +386,9 @@
                 var b = document.getElementById("edit_book_b").value;
                 var c = document.getElementById("edit_book_c").value;
                 php_connect("PHP/edit_book_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_book_php_do);
-                show_all_books();
+                setTimeout(function() {
+                    show_all_books();
+                }, 3000);
             }
 
             //for_buyer
@@ -396,7 +402,9 @@
                 var b = document.getElementById("new_buyer_b").value;
                 var c = document.getElementById("new_buyer_c").value;
                 php_connect("PHP/add_new_buyer.php?a=" + a + "&b=" + b + "&c=" + c, new_buyer_php_do);
-                show_all_buyer();
+                setTimeout(function() {
+                    show_all_buyer();
+                }, 3000);
             }
             /*----------------------------*/
             function delete_buyer_php_do(xmlhttp) {
@@ -406,7 +414,9 @@
             function delete_buyer() {
                 var a = document.getElementById("delete_buyer_a").value;
                 php_connect("PHP/delete_buyer.php?a=" + a, delete_buyer_php_do);
-                show_all_buyer();
+                setTimeout(function() {
+                    show_all_buyer();
+                }, 3000);
             }
             /*----------------------------*/
             function edit_buyer_php_do(xmlhttp) {
@@ -418,7 +428,9 @@
                 var b = document.getElementById("edit_buyer_b").value;
                 var c = document.getElementById("edit_buyer_c").value;
                 php_connect("PHP/edit_buyer_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_buyer_php_do);
-                show_all_buyer();
+                setTimeout(function() {
+                    show_all_buyer();
+                }, 3000);
             }
 
             //for_deal
@@ -432,7 +444,9 @@
                 var b = document.getElementById("new_deal_b").value;
                 var c = document.getElementById("new_deal_c").value;
                 php_connect("PHP/add_new_deal.php?a=" + a + "&b=" + b + "&c=" + c, new_deal_php_do);
-                show_all_deals();
+                setTimeout(function() {
+                    show_all_deals();
+                }, 3000);
             }
             /*----------------------------*/
             function delete_deal_php_do(xmlhttp) {
@@ -442,7 +456,9 @@
             function delete_deal() {
                 var a = document.getElementById("delete_deal_a").value;
                 php_connect("PHP/delete_deal.php?a=" + a, delete_deal_php_do);
-                show_all_deals();
+                setTimeout(function() {
+                    show_all_deals();
+                }, 3000);
             }
             /*----------------------------*/
             function edit_deal_php_do(xmlhttp) {
@@ -454,7 +470,9 @@
                 var b = document.getElementById("edit_deal_b").value;
                 var c = document.getElementById("edit_deal_c").value;
                 php_connect("PHP/edit_deal_information.php?a=" + a + "&b=" + b + "&c=" + c, edit_deal_php_do);
-                show_all_daels();
+                setTimeout(function() {
+                    show_all_deals();
+                }, 3000);
             }
 
             function init() {
