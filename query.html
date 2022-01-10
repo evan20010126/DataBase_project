@@ -49,7 +49,10 @@
     <header>
         <div class="container">
             <h1>查詢資訊</h1>
-            <p class="lead">Clerk can query something with this web.<br><br> <button class="btn btn-success" data-toggle="modal" data-target="#myModal">User_view</button></p>
+            <p class="lead">Clerk can query something with this web.<br><br>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">User_view</button>
+                <button class="btn btn-primary" id="query_ever_order_customer_name_btn">Query ever order person name</button>
+            </p>
             <hr>
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
@@ -423,12 +426,29 @@
         php_connect("PHP/user_view.php", show_modal_context_php_do);
     }
 
+    /*----------------*/
+    function show_query_ever_order_customer_name_php_do(xmlhttp) {
+        var arr = JSON.parse(xmlhttp.responseText);
+        // document.getElementById("modal_context").innerHTML = "";
+        var html = "";
+        for (var i = 0; i < arr.length; i++) {
+            html += arr[i][0] + "\n";
+        }
+        alert(html);
+        // document.getElementById("modal_context").innerHTML = html;
+    }
+
+    function show_query_ever_order_customer_name() {
+        php_connect("PHP/query_ever_order_customer_name.php", show_query_ever_order_customer_name_php_do);
+    }
+
     function init() {
         document.getElementById("search_classification_btn").onclick = show_selected_classification;
         document.getElementById("search_phone_btn").onclick = show_deal_phonenumber;
         show_all_books();
         show_all_deals();
         show_modal_context();
+        document.getElementById("query_ever_order_customer_name_btn").onclick = show_query_ever_order_customer_name;
     }
     window.onload = init;
 </script>
