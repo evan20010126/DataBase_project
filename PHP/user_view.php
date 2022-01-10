@@ -11,4 +11,5 @@
         echo json_encode(array());
     }
     //輸出{"BookID,"BookName","Price","Classification","StoreNumber"}}(依此排序輸出)
+    //CREATE VIEW user_view as SELECT BookID, BookName, Classification FROM storage;
 ?>
