@@ -442,7 +442,16 @@
         php_connect("PHP/query_ever_order_customer_name.php", show_query_ever_order_customer_name_php_do);
     }
 
+    function connect_func_php_do(xmlhttp) {
+
+    }
+
+    function connect_func() {
+        php_connect("PHP/session.php", connect_func_php_do);
+    }
+
     function init() {
+        connect_func();
         document.getElementById("search_classification_btn").onclick = show_selected_classification;
         document.getElementById("search_phone_btn").onclick = show_deal_phonenumber;
         show_all_books();
