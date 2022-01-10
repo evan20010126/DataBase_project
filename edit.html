@@ -23,10 +23,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">資料庫系統</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-              <span class="sr-only">導覽按鈕</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
+                    <span class="sr-only">導覽按鈕</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -351,7 +351,7 @@
             //for_book
             /*----------------------------*/
             function new_book_php_do(xmlhttp) {
-                alert("New book sucess!");
+                alert("Add book sucess!");
             }
 
             function new_book() {
@@ -436,7 +436,12 @@
             //for_deal
             /*----------------------------*/
             function new_deal_php_do(xmlhttp) {
-                alert("New deal sucess!");
+                var message = xmlhttp.responseText;
+                if (message == "1") {
+                    alert("Add deal sucess!");
+                } else {
+                    alert(message);
+                }
             }
 
             function new_deal() {
