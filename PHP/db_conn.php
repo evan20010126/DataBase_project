@@ -1,6 +1,7 @@
 <?php 
-    $user = 'software_engineer'; //資料庫使用者名稱
-    $password = 'ycu@7H]mfN01C4er'; //資料庫的密碼
+    session_start();
+    $user =  $_SESSION['user']; //資料庫使用者名稱
+    $password = $_SESSION['password']; //資料庫的密碼
     try{
         $db = new 
             PDO('mysql:host=20.212.218.184;dbname=ntou_bks;charset=utf8',$user,$password);
