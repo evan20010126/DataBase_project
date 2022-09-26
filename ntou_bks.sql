@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 26, 2022 at 08:40 AM
+-- Host: localhost
+-- Generation Time: Sep 26, 2022 at 10:56 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,9 +39,10 @@ CREATE TABLE `buyer` (
 --
 
 INSERT INTO `buyer` (`BuyerID`, `BuyerName`, `BuyerPhone`, `BuyerAddress`) VALUES
-(1, 'yumi\r\n', '0988226379', '新竹縣尖石鄉玉峰村14鄰司馬庫斯2號'),
-(2, 'evan', '0963908097', '台北市松山區南京西路\r\n1段123號1234樓之7'),
-(3, 'edmund\r\n', '0933566974', '台北市松山區南京東路\r\n5段230號14樓之6');
+(4, 'Brian', '0955643153', '台北市安山區129巷'),
+(5, 'Brian', '0955643153', '台北市安山區128巷'),
+(6, 'evan', '0955643153', '台北市安山區1211巷'),
+(7, 'yumi', '0955643148', '台北市安山區1211巷');
 
 -- --------------------------------------------------------
 
@@ -81,9 +82,9 @@ CREATE TABLE `deal` (
 --
 
 INSERT INTO `deal` (`DealID`, `BookID`, `BuyerID`, `DealAmount`) VALUES
-(1, '3', 3, 100),
-(2, '2', 1, 1),
-(3, '1', 3, 1);
+(1, '1', 4, 10),
+(2, '8', 5, 12),
+(3, '3', 6, 23);
 
 -- --------------------------------------------------------
 
@@ -167,7 +168,13 @@ ALTER TABLE `storage`
 -- AUTO_INCREMENT for table `buyer`
 --
 ALTER TABLE `buyer`
-  MODIFY `BuyerID` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `BuyerID` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `deal`
+--
+ALTER TABLE `deal`
+  MODIFY `DealID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `storage`
